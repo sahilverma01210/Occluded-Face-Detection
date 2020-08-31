@@ -13,7 +13,7 @@ import com.example.occludedfacedetection.GraphicOverlay.Graphic;
  * graphic overlay view.
  */
 public class FaceGraphic extends Graphic {
-  private static final float ID_TEXT_SIZE = 40.0f;
+  private static final float ID_TEXT_SIZE = 80.0f;
   private static final float BOX_STROKE_WIDTH = 5.0f;
 
   private static final int[] COLOR_CHOICES = {
@@ -59,20 +59,16 @@ public class FaceGraphic extends Graphic {
   /** Draws the face annotations for position on the supplied canvas. */
   @Override
   public void draw(Canvas canvas) {
-//    Face face = detectedFace;
-//    if (face == null) {
-//      return;
-//    }
-//
-//    // Draws a bounding box around the face.
-//    float x = translateX(face.getBoundingBox().centerX());
-//    float y = translateY(face.getBoundingBox().centerY());
-//    float xOffset = scaleX(face.getBoundingBox().width() / 2.0f);
-//    float yOffset = scaleY(face.getBoundingBox().height() / 2.0f);
-//    float left = x - xOffset;
-//    float top = y - yOffset;
-//    float right = x + xOffset;
-//    float bottom = y + yOffset;
-//    canvas.drawRect(left, top, right, bottom, boxPaint);
+    Face face = detectedFace;
+    if (face == null) {
+      return;
+    }
+
+    // Draw Rectangle
+    int startX=face.getStartX();
+    int startY=face.getStartY();
+    int endX=face.getEndX();
+    int endY=face.getEndY();
+    canvas.drawRect(startY, startX, endY, endX, boxPaint);
   }
 }

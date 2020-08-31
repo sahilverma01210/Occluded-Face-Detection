@@ -1,13 +1,12 @@
 
 package com.example.occludedfacedetection;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.util.Log;
-import android.widget.CompoundButton;
-import android.widget.ToggleButton;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -21,12 +20,13 @@ import java.util.List;
 /**
  * Activity to display detected faces.
  */
-public final class LivePreviewActivity extends AppCompatActivity implements OnRequestPermissionsResultCallback, CompoundButton.OnCheckedChangeListener {
+public final class LivePreviewActivity extends AppCompatActivity implements OnRequestPermissionsResultCallback {
   private static final String TAG = "LivePreviewActivity";
   private static final int PERMISSION_REQUESTS = 1;
   private CameraSource cameraSource = null;
   private CameraSourcePreview preview;
   private GraphicOverlay graphicOverlay;
+  private TextView textView;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -35,9 +35,7 @@ public final class LivePreviewActivity extends AppCompatActivity implements OnRe
 
     preview = (CameraSourcePreview) findViewById(R.id.framePreview);
     graphicOverlay = (GraphicOverlay) findViewById(R.id.faceOverlay);
-
-    ToggleButton facingSwitch = (ToggleButton) findViewById(R.id.facingswitch);
-    facingSwitch.setOnCheckedChangeListener(this);
+    textView = (TextView)findViewById(R.id.fpsText);
 
     if (allPermissionsGranted()) {
       createCameraSource();
@@ -46,10 +44,12 @@ public final class LivePreviewActivity extends AppCompatActivity implements OnRe
     }
   }
 
+  @SuppressLint("SetTextI18n")
   private void createCameraSource() {
     if (cameraSource == null) {
       cameraSource = new CameraSource(this, graphicOverlay);
     }
+    textView.setText(cameraSource.getFPS() + " FPS");
     cameraSource.setMachineLearningFrameProcessor(this);
   }
 
@@ -133,19 +133,5 @@ public final class LivePreviewActivity extends AppCompatActivity implements OnRe
     if (cameraSource != null) {
       cameraSource.release();
     }
-  }
-
-  @Override
-  public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-    Log.d(TAG, "Set facing");
-    if (cameraSource != null) {
-      if (isChecked) {
-        cameraSource.setFacing(CameraSource.CAMERA_FACING_FRONT);
-      } else {
-        cameraSource.setFacing(CameraSource.CAMERA_FACING_BACK);
-      }
-    }
-    preview.stop();
-    startPreview();
   }
 }

@@ -4,16 +4,31 @@ package com.example.occludedfacedetection.facedetection;
  * To Store Detected Face attributes
  */
 public class Face {
-    private int width;
-    private int height;
-    public Face(int width,int height){
-        this.width=width;
-        this.height=height;
+    private int startX;
+    private int startY;
+    private int endX;
+    private int endY;
+    private double confidence;
+    public Face(int startX,int startY,int endX,int endY,double confidence){
+        this.startX=startX;
+        this.startY=startY;
+        this.endX=endX;
+        this.endY=endY;
+        this.confidence=confidence;
     }
-    int getWidth(){
-        return width;
+    int getStartX(){
+        return startX;
     }
-    int getHeight(){
-        return height;
+    int getStartY(){
+        return startY;
+    }
+    int getEndX(){
+        return endX;
+    }
+    int getEndY(){
+        return endY;
+    }
+    double getConfidence(){
+        return confidence;
     }
 }

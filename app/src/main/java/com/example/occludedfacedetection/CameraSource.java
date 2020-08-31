@@ -58,7 +58,7 @@ public class CameraSource {
   private Size previewSize;
   // These values may be requested by the caller.  Due to hardware limitations, we may need to
   // select close, but not exactly the same values for these.
-  private final float requestedFps = 20.0f;
+  private final float requestedFps = 40.0f;
   private final int requestedPreviewWidth = 1280;
   private final int requestedPreviewHeight = 960;
   private final boolean requestedAutoFocus = true;
@@ -685,5 +685,10 @@ public class CameraSource {
     camera.addCallbackBuffer(createPreviewBuffer(previewSize));
 
     return camera;
+  }
+
+  public int getFPS(){
+    int fps = (int)requestedFps;
+    return fps;
   }
 }

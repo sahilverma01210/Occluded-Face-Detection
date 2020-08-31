@@ -13,52 +13,49 @@
 11    <uses-permission android:name="android.permission.CAMERA" />
 11-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:5:5-65
 11-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:5:22-62
-12    <uses-permission android:name="android.permission.INTERNET" />
-12-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:6:5-66
-12-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:6:22-64
-13    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-13-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:7:5-81
-13-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:7:22-78
-14
-15    <uses-feature android:name="android.hardware.camera" />
-15-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:9:5-60
-15-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:9:19-57
-16    <uses-feature android:name="android.hardware.camera.autofocus" />
-16-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:10:5-70
-16-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:10:19-67
-17
-18    <application
-18-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:12:5-26:19
-19        android:allowBackup="true"
-19-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:13:9-35
-20        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-20-->[androidx.core:core:1.1.0] /root/.gradle/caches/transforms-2/files-2.1/76f2b6439d16df60df3177021482ee5a/core-1.1.0/AndroidManifest.xml:24:18-86
-21        android:debuggable="true"
-22        android:icon="@mipmap/ic_launcher"
-22-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:14:9-43
-23        android:label="@string/app_name"
-23-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:15:9-41
-24        android:roundIcon="@mipmap/ic_launcher_round"
-24-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:16:9-54
-25        android:supportsRtl="true"
-25-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:17:9-35
-26        android:testOnly="true"
-27        android:theme="@style/AppTheme" >
-27-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:18:9-40
-28        <activity android:name="com.example.occludedfacedetection.LivePreviewActivity" >
-28-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:19:9-25:20
-28-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:19:19-54
-29            <intent-filter>
-29-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:20:13-24:29
-30                <action android:name="android.intent.action.MAIN" />
-30-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:21:17-69
-30-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:21:25-66
-31
-32                <category android:name="android.intent.category.LAUNCHER" />
-32-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:23:17-77
-32-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:23:27-74
-33            </intent-filter>
-34        </activity>
-35    </application>
-36
-37</manifest>
+12    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+12-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:6:5-81
+12-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:6:22-78
+13
+14    <uses-feature android:name="android.hardware.camera" />
+14-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:7:5-60
+14-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:7:19-57
+15    <uses-feature android:name="android.hardware.camera.autofocus" />
+15-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:8:5-70
+15-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:8:19-67
+16
+17    <application
+17-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:10:5-24:19
+18        android:allowBackup="true"
+18-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:11:9-35
+19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+19-->[androidx.core:core:1.1.0] /root/.gradle/caches/transforms-2/files-2.1/76f2b6439d16df60df3177021482ee5a/core-1.1.0/AndroidManifest.xml:24:18-86
+20        android:debuggable="true"
+21        android:icon="@mipmap/ic_launcher"
+21-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:12:9-43
+22        android:label="@string/app_name"
+22-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:13:9-41
+23        android:roundIcon="@mipmap/ic_launcher_round"
+23-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:14:9-54
+24        android:supportsRtl="true"
+24-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:15:9-35
+25        android:testOnly="true"
+26        android:theme="@style/AppTheme" >
+26-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:16:9-40
+27        <activity android:name="com.example.occludedfacedetection.LivePreviewActivity" >
+27-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:17:9-23:20
+27-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:17:19-54
+28            <intent-filter>
+28-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:18:13-22:29
+29                <action android:name="android.intent.action.MAIN" />
+29-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:19:17-69
+29-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:19:25-66
+30
+31                <category android:name="android.intent.category.LAUNCHER" />
+31-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:21:17-77
+31-->/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:21:27-74
+32            </intent-filter>
+33        </activity>
+34    </application>
+35
+36</manifest>

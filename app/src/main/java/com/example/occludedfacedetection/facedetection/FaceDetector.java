@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.res.AssetFileDescriptor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
 import android.graphics.ImageFormat;
 import android.graphics.Rect;
 import android.graphics.YuvImage;
@@ -26,7 +27,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -45,7 +45,7 @@ public class FaceDetector extends DetectorBase {
 
   public FaceDetector(Activity my_context) {
     try{
-      tflite=new Interpreter(loadmodelfile(my_context));
+      tflite=new Interpreter(loadModelFile(my_context));
     }catch (Exception e) {
       e.printStackTrace();
     }
@@ -74,20 +74,27 @@ public class FaceDetector extends DetectorBase {
     inputImageBuffer = loadImage(bitmap);
     Object[] inputArray = {inputImageBuffer.getBuffer()};
     Map<Integer, Object> outputMap = new HashMap<>();
-    float[][][] outputClasses = new float[1][NUM_DETECTIONS][2];
-    float[][][] outputLocations = new float[1][NUM_DETECTIONS][4];
-    float[][][] outputScores = new float[1][NUM_DETECTIONS][10];
-    outputMap.put(0, outputClasses);
-    outputMap.put(1, outputLocations);
-    outputMap.put(2, outputScores);
+    float[][] output = new float[NUM_DETECTIONS][16];
+    outputMap.put(0, output);
 
     // Run Interpreter
     tflite.runForMultipleInputsOutputs(inputArray,outputMap);
+    int overlayHeight = graphicOverlay.getHeight();
+    int overlayWidth = graphicOverlay.getWidth();
 
     // Visualise results
+    graphicOverlay.clear();
     for(int i=0;i<NUM_DETECTIONS-1;i++){
-      if(outputClasses[0][i][1]>0.999){
-        System.out.println(Arrays.toString(outputLocations[0][i]));
+      if(output[i][15]>0.4){
+        int startX=(int)(output[i][0]*overlayHeight);
+        int startY=(int)((1.0-output[i][1])*overlayWidth);
+        int endX=(int)(output[i][2]*overlayHeight);
+        int endY=(int)((1.0-output[i][3])*overlayWidth);
+        double confidence=(double)output[i][15];
+        Face face = new Face(startX,startY,endX,endY,confidence);
+        FaceGraphic faceGraphic = new FaceGraphic(graphicOverlay);
+        graphicOverlay.add(faceGraphic);
+        faceGraphic.updateFace(face, frameMetadata.getCameraFacing());
       }
     }
   }
@@ -111,12 +118,13 @@ public class FaceDetector extends DetectorBase {
     return new NormalizeOp(IMAGE_MEAN, IMAGE_STD);
   }
 
-  private MappedByteBuffer loadmodelfile(Activity activity) throws IOException {
-    AssetFileDescriptor fileDescriptor=activity.getAssets().openFd("model_lite.tflite");
+  private MappedByteBuffer loadModelFile(Activity activity) throws IOException {
+    AssetFileDescriptor fileDescriptor=activity.getAssets().openFd("retinaface_mbv2.tflite");
     FileInputStream inputStream=new FileInputStream(fileDescriptor.getFileDescriptor());
     FileChannel fileChannel=inputStream.getChannel();
     long startoffset = fileDescriptor.getStartOffset();
     long declaredLength=fileDescriptor.getDeclaredLength();
     return fileChannel.map(FileChannel.MapMode.READ_ONLY,startoffset,declaredLength);
   }
+
 }
