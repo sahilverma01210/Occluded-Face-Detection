@@ -3,10 +3,10 @@ package com.example.occludedfacedetection;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -21,36 +21,39 @@ import java.util.List;
  * Activity to display detected faces.
  */
 public final class LivePreviewActivity extends AppCompatActivity implements OnRequestPermissionsResultCallback {
-  private static final String TAG = "LivePreviewActivity";
   private static final int PERMISSION_REQUESTS = 1;
   private CameraSource cameraSource = null;
   private CameraSourcePreview preview;
   private GraphicOverlay graphicOverlay;
-  private TextView textView;
+  private int fps;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_live_preview);
 
+    // Receive requested FPS
+    Intent intent=getIntent();
+    fps=intent.getIntExtra("FPS",0);
+
     preview = (CameraSourcePreview) findViewById(R.id.framePreview);
     graphicOverlay = (GraphicOverlay) findViewById(R.id.faceOverlay);
-    textView = (TextView)findViewById(R.id.fpsText);
 
+    // Check for required permissions and start camera and detection
     if (allPermissionsGranted()) {
       createCameraSource();
     } else {
       getRuntimePermissions();
     }
+
   }
 
   @SuppressLint("SetTextI18n")
   private void createCameraSource() {
     if (cameraSource == null) {
-      cameraSource = new CameraSource(this, graphicOverlay);
+      cameraSource = new CameraSource(this, graphicOverlay,fps);
     }
-    textView.setText(cameraSource.getFPS() + " FPS");
-    cameraSource.setMachineLearningFrameProcessor(this);
+    cameraSource.setMachineLearningFrameProcessor();
   }
 
   private boolean allPermissionsGranted() {

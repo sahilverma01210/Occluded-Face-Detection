@@ -1,23 +1,11 @@
 [
     {
-        "merged": "/root/AndroidStudioProjects/OccludedFaceDetection/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
-        "source": "/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png"
-    },
-    {
-        "merged": "/root/AndroidStudioProjects/OccludedFaceDetection/app/build/intermediates/res/merged/debug/layout_activity_live_preview.xml.flat",
-        "source": "/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/res/layout/activity_live_preview.xml"
-    },
-    {
-        "merged": "/root/AndroidStudioProjects/OccludedFaceDetection/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
-        "source": "/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/res/mipmap-hdpi/ic_launcher.png"
-    },
-    {
         "merged": "/root/AndroidStudioProjects/OccludedFaceDetection/app/build/intermediates/res/merged/debug/drawable-v24_ic_launcher_foreground.xml.flat",
         "source": "/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/res/drawable-v24/ic_launcher_foreground.xml"
     },
     {
-        "merged": "/root/AndroidStudioProjects/OccludedFaceDetection/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+        "merged": "/root/AndroidStudioProjects/OccludedFaceDetection/app/build/intermediates/res/merged/debug/layout_splash.xml.flat",
+        "source": "/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/res/layout/splash.xml"
     },
     {
         "merged": "/root/AndroidStudioProjects/OccludedFaceDetection/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_foreground.png.flat",
@@ -28,20 +16,8 @@
         "source": "/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "/root/AndroidStudioProjects/OccludedFaceDetection/app/build/intermediates/res/merged/debug/drawable_me.png.flat",
-        "source": "/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/res/drawable/me.png"
-    },
-    {
         "merged": "/root/AndroidStudioProjects/OccludedFaceDetection/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_round.png.flat",
         "source": "/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
-    },
-    {
-        "merged": "/root/AndroidStudioProjects/OccludedFaceDetection/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
-    },
-    {
-        "merged": "/root/AndroidStudioProjects/OccludedFaceDetection/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
-        "source": "/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png"
     },
     {
         "merged": "/root/AndroidStudioProjects/OccludedFaceDetection/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
@@ -56,6 +32,42 @@
         "source": "/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png"
     },
     {
+        "merged": "/root/AndroidStudioProjects/OccludedFaceDetection/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/root/AndroidStudioProjects/OccludedFaceDetection/app/build/intermediates/res/merged/debug/drawable_ic_launcher_background.xml.flat",
+        "source": "/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/res/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/root/AndroidStudioProjects/OccludedFaceDetection/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/root/AndroidStudioProjects/OccludedFaceDetection/app/build/intermediates/res/merged/debug/layout_activity_live_preview.xml.flat",
+        "source": "/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/res/layout/activity_live_preview.xml"
+    },
+    {
+        "merged": "/root/AndroidStudioProjects/OccludedFaceDetection/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/root/AndroidStudioProjects/OccludedFaceDetection/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/root/AndroidStudioProjects/OccludedFaceDetection/app/build/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/root/AndroidStudioProjects/OccludedFaceDetection/app/build/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/root/AndroidStudioProjects/OccludedFaceDetection/app/build/intermediates/res/merged/debug/layout_main.xml.flat",
+        "source": "/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/res/layout/main.xml"
+    },
+    {
         "merged": "/root/AndroidStudioProjects/OccludedFaceDetection/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_round.png.flat",
         "source": "/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
     },
@@ -68,16 +80,12 @@
         "source": "/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/res/drawable-v24/flip_cam_512.png"
     },
     {
-        "merged": "/root/AndroidStudioProjects/OccludedFaceDetection/app/build/intermediates/res/merged/debug/drawable_ic_launcher_background.xml.flat",
-        "source": "/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/res/drawable/ic_launcher_background.xml"
-    },
-    {
-        "merged": "/root/AndroidStudioProjects/OccludedFaceDetection/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
-    },
-    {
         "merged": "/root/AndroidStudioProjects/OccludedFaceDetection/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat",
         "source": "/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/root/AndroidStudioProjects/OccludedFaceDetection/app/build/intermediates/res/merged/debug/drawable_back.png.flat",
+        "source": "/root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/res/drawable/back.png"
     },
     {
         "merged": "/root/AndroidStudioProjects/OccludedFaceDetection/app/build/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",

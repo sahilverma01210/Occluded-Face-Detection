@@ -27,6 +27,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
+import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -61,7 +62,7 @@ public class FaceDetector extends DetectorBase {
   }
 
   @Override
-  protected void detectInImage(byte[] data, final FrameMetadata frameMetadata, final GraphicOverlay graphicOverlay) {
+  protected float detectInImage(byte[] data, final FrameMetadata frameMetadata, final GraphicOverlay graphicOverlay) {
 
     // Convert frame bytes int bitmap
     YuvImage yuvImage = new YuvImage(data, ImageFormat.NV21, frameMetadata.getWidth(), frameMetadata.getHeight(), null);
@@ -78,9 +79,15 @@ public class FaceDetector extends DetectorBase {
     outputMap.put(0, output);
 
     // Run Interpreter
+    long startTime = System.nanoTime();
     tflite.runForMultipleInputsOutputs(inputArray,outputMap);
+    long endTime = System.nanoTime();
+
     int overlayHeight = graphicOverlay.getHeight();
     int overlayWidth = graphicOverlay.getWidth();
+
+    long elapsedTime = endTime - startTime;
+    double Rate = (double)elapsedTime / 1_000_000_000.0;
 
     // Visualise results
     graphicOverlay.clear();
@@ -97,6 +104,7 @@ public class FaceDetector extends DetectorBase {
         faceGraphic.updateFace(face, frameMetadata.getCameraFacing());
       }
     }
+    return (float) Rate;
   }
 
   private TensorImage loadImage(final Bitmap bitmap) {

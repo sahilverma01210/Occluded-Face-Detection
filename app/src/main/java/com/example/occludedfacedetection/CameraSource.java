@@ -15,11 +15,15 @@ import android.util.Log;
 import android.view.Surface;
 import android.view.SurfaceHolder;
 import android.view.WindowManager;
+import android.widget.TextView;
 
 import com.example.occludedfacedetection.facedetection.FaceDetector;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.lang.Thread.State;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.IdentityHashMap;
 import java.util.List;
@@ -41,7 +45,7 @@ public class CameraSource {
    * we can choose any ID we want here. The dummy surface texture is not a crazy hack - it is
    * actually how the camera team recommends using the camera without a preview.
    */
-  private static final int DUMMY_TEXTURE_NAME = 100;
+  private static final int DUMMY_TEXTURE_NAME = 40;
   /**
    * If the absolute difference between a preview size aspect ratio and a picture size aspect ratio
    * is less than this tolerance, they are considered to be the same aspect ratio.
@@ -49,6 +53,8 @@ public class CameraSource {
   private static final float ASPECT_RATIO_TOLERANCE = 0.01f;
   protected Activity activity;
   private Camera camera;
+  private float CPUTemp = 0f;
+  private float ProcessingRate = 0f;
   protected int facing = CAMERA_FACING_BACK;
   /**
    * Rotation of the device, and thus the associated preview images captured from the device. See
@@ -58,7 +64,7 @@ public class CameraSource {
   private Size previewSize;
   // These values may be requested by the caller.  Due to hardware limitations, we may need to
   // select close, but not exactly the same values for these.
-  private final float requestedFps = 40.0f;
+  private float requestedFps = 40.0f;
   private final int requestedPreviewWidth = 1280;
   private final int requestedPreviewHeight = 960;
   private final boolean requestedAutoFocus = true;
@@ -178,7 +184,6 @@ public class CameraSource {
     @Override
     public void run() {
       byte[] data;
-
       while (true) {
         synchronized (lock) {
           while (active && (pendingFrameData == null)) {
@@ -216,29 +221,46 @@ public class CameraSource {
             Log.d(TAG, "Process an image");
             FrameMetadata frameMetadata= new FrameMetadata.Builder().setWidth(previewSize.getWidth()).setHeight(previewSize.getHeight()).setRotation(rotation).setCameraFacing(facing).build();
             frameProcessor.process(data,frameMetadata, graphicOverlay);
+            CPUTemp = cpuTemperature();
+            ProcessingRate = frameProcessor.getProcessingRate();
+            activity.runOnUiThread(new Runnable() {
+              @SuppressLint("SetTextI18n")
+              @Override
+              public void run() {
+                DecimalFormat df = new DecimalFormat("#.###");
+                TextView fpsText = (TextView)activity.findViewById(R.id.fpsTextView);
+                TextView speedText = (TextView)activity.findViewById(R.id.speedTextView);
+                TextView cpuTempText = (TextView)activity.findViewById(R.id.cpuTempTextView);
+                fpsText.setText(String.valueOf((int)requestedFps));
+                speedText.setText(df.format(frameProcessor.getProcessingRate()));
+                cpuTempText.setText(df.format(cpuTemperature())+" \u2103");
+              }
+            });
           }
         } catch (Throwable t) {
           Log.e(TAG, "Exception thrown from receiver.", t);
         } finally {
           camera.addCallbackBuffer(data);
         }
+
       }
     }
   }
 
   //// -------------------------------------------------------------------------------------------------------- ////
 
-  public CameraSource(Activity activity, GraphicOverlay overlay) {
+  public CameraSource(Activity activity, GraphicOverlay overlay,int fps) {
     this.activity = activity;
     graphicOverlay = overlay;
     graphicOverlay.clear();
+    requestedFps =fps;
     processingRunnable = new FrameProcessingRunnable();
   }
 
   // ==============================================================================================
   // Frame processing
   // ==============================================================================================
-  void setMachineLearningFrameProcessor(Activity activity) {
+  void setMachineLearningFrameProcessor() {
     synchronized (processorLock) {
       graphicOverlay.clear();
       if (frameProcessor != null) {
@@ -690,5 +712,32 @@ public class CameraSource {
   public int getFPS(){
     int fps = (int)requestedFps;
     return fps;
+  }
+
+  public float getCPUTemp(){
+    return CPUTemp;
+  }
+
+  public float getProcessingRate(){
+    return ProcessingRate;
+  }
+
+  public static float cpuTemperature() {
+    Process process;
+    try {
+      process = Runtime.getRuntime().exec("cat sys/class/thermal/thermal_zone0/temp");
+      process.waitFor();
+      BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+      String line = reader.readLine();
+      if(line!=null) {
+        float temp = Float.parseFloat(line);
+        return temp / 1000.0f;
+      }else{
+        return 51.0f;
+      }
+    } catch (Exception e) {
+      e.printStackTrace();
+      return 0.0f;
+    }
   }
 }

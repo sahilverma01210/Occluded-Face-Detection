@@ -9,33 +9,131 @@
     android:background="#000"
     android:keepScreenOn="true">
 
-  <com.example.occludedfacedetection.CameraSourcePreview
-      android:id="@+id/framePreview"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_alignParentStart="true"
-      android:layout_alignParentTop="true">
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="550dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="0dp"
+        android:rotation="90"
+        android:text="FPS"
+        android:textColor="#F44336"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
-      <com.example.occludedfacedetection.GraphicOverlay
-          android:id="@+id/faceOverlay"
-          android:layout_width="match_parent"
-          android:layout_height="match_parent"
-          android:layout_alignParentStart="true"
-          android:layout_alignParentTop="true"
-          android:layout_alignParentBottom="true"/>
+    <TextView
+        android:id="@+id/fpsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="550dp"
+        android:layout_marginEnd="90dp"
+        android:layout_marginBottom="0dp"
+        android:rotation="90"
+        android:text="FPS"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
-      <TextView
-          android:id="@+id/fpsText"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:paddingTop="100dp"
-          android:rotation="90"
-          android:text="FPS -  "
-          android:textColor="#FF0000"
-          android:textSize="24sp"
-          android:textStyle="bold" />
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="550dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="0dp"
+        android:rotation="90"
+        android:text="Time(s)"
+        android:textColor="#8BC34A"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
-  </com.example.occludedfacedetection.CameraSourcePreview>
+    <TextView
+        android:id="@+id/speedTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="550dp"
+        android:layout_marginEnd="190dp"
+        android:layout_marginBottom="0dp"
+        android:rotation="90"
+        android:text="Speed"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="wrap_content"
+        android:layout_height="142dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="550dp"
+        android:layout_marginEnd="240dp"
+        android:layout_marginBottom="0dp"
+        android:rotation="90"
+        android:text="CPU Temp."
+        android:textColor="#FFEB3B"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/cpuTempTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="142dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="550dp"
+        android:layout_marginEnd="290dp"
+        android:layout_marginBottom="0dp"
+        android:rotation="90"
+        android:text="CPU Temp"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <com.example.occludedfacedetection.CameraSourcePreview
+        android:id="@+id/framePreview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <com.example.occludedfacedetection.GraphicOverlay
+            android:id="@+id/faceOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:textAlignment="textStart" />
+
+    </com.example.occludedfacedetection.CameraSourcePreview>
 
 
 

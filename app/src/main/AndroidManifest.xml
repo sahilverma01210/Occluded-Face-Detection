@@ -14,13 +14,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".LivePreviewActivity">
+        <activity android:name=".Splash" android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Main" android:parentActivityName=".Splash" />
+        <activity android:name=".LivePreviewActivity" android:parentActivityName=".Main" />
     </application>
 
 </manifest>

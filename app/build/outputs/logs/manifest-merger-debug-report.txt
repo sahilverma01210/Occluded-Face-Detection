@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:2:1-26:12
+ADDED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:2:1-28:12
 MERGED from [com.google.android.material:material:1.0.0] /root/.gradle/caches/transforms-2/files-2.1/d9fe90b20373e53cda14cf70a3a9d6b6/material-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] /root/.gradle/caches/transforms-2/files-2.1/f209091eb3926c649f0b3346884e478c/appcompat-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /root/.gradle/caches/transforms-2/files-2.1/75baa063235eedb7ab2cc635bdb88d73/constraintlayout-1.1.3/AndroidManifest.xml:2:1-11:12
@@ -41,20 +41,20 @@ MERGED from [androidx.savedstate:savedstate:1.0.0] /root/.gradle/caches/transfor
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /root/.gradle/caches/transforms-2/files-2.1/c6f1e76c078a7e4f5288325854cab247/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /root/.gradle/caches/transforms-2/files-2.1/7282e00d74c6a6acf53f4bfd68421266/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] /root/.gradle/caches/transforms-2/files-2.1/73114719268a97e9fd391905563b2ee9/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
-INJECTED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:2:1-26:12
-INJECTED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:2:1-28:12
+INJECTED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:2:1-28:12
 	package
 		ADDED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:3:5-48
 		INJECTED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml
 		INJECTED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml
-		ADDED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:2:1-26:12
+		ADDED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:2:1-28:12
 		INJECTED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml
-		ADDED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:2:1-26:12
+		ADDED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:2:1-28:12
 		INJECTED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:2:11-69
@@ -75,7 +75,7 @@ ADDED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/Androi
 	android:name
 		ADDED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:8:19-67
 application
-ADDED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:10:5-24:19
+ADDED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:10:5-26:19
 MERGED from [com.google.android.material:material:1.0.0] /root/.gradle/caches/transforms-2/files-2.1/d9fe90b20373e53cda14cf70a3a9d6b6/material-1.0.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.0.0] /root/.gradle/caches/transforms-2/files-2.1/d9fe90b20373e53cda14cf70a3a9d6b6/material-1.0.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /root/.gradle/caches/transforms-2/files-2.1/75baa063235eedb7ab2cc635bdb88d73/constraintlayout-1.1.3/AndroidManifest.xml:9:5-20
@@ -102,10 +102,12 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /root/.grad
 		ADDED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:11:9-35
 	android:theme
 		ADDED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:16:9-40
-activity#com.example.occludedfacedetection.LivePreviewActivity
+activity#com.example.occludedfacedetection.Splash
 ADDED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:17:9-23:20
+	android:theme
+		ADDED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:17:42-76
 	android:name
-		ADDED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:17:19-54
+		ADDED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:17:19-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:18:13-22:29
 action#android.intent.action.MAIN
@@ -116,6 +118,18 @@ category#android.intent.category.LAUNCHER
 ADDED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:21:17-77
 	android:name
 		ADDED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:21:27-74
+activity#com.example.occludedfacedetection.Main
+ADDED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:24:9-79
+	android:parentActivityName
+		ADDED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:24:40-76
+	android:name
+		ADDED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:24:19-39
+activity#com.example.occludedfacedetection.LivePreviewActivity
+ADDED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:25:9-92
+	android:parentActivityName
+		ADDED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:25:55-89
+	android:name
+		ADDED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml:25:19-54
 uses-sdk
 INJECTED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /root/AndroidStudioProjects/OccludedFaceDetection/app/src/main/AndroidManifest.xml
