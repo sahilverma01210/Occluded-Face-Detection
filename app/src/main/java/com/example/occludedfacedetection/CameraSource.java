@@ -550,6 +550,8 @@ public class CameraSource {
     for (int[] range : previewFpsRangeList) {
       int deltaMin = desiredPreviewFpsScaled - range[Camera.Parameters.PREVIEW_FPS_MIN_INDEX];
       int deltaMax = desiredPreviewFpsScaled - range[Camera.Parameters.PREVIEW_FPS_MAX_INDEX];
+      Log.d("min", String.valueOf(range[Camera.Parameters.PREVIEW_FPS_MIN_INDEX]));
+      Log.d("max", String.valueOf(range[Camera.Parameters.PREVIEW_FPS_MAX_INDEX]));
       int diff = Math.abs(deltaMin) + Math.abs(deltaMax);
       if (diff < minDiff) {
         selectedFpsRange = range;
@@ -725,7 +727,7 @@ public class CameraSource {
   public static float cpuTemperature() {
     Process process;
     try {
-      process = Runtime.getRuntime().exec("cat sys/class/thermal/thermal_zone0/temp");
+      process = Runtime.getRuntime().exec("cat sys/class/thermal/thermal_zone17/temp");
       process.waitFor();
       BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
       String line = reader.readLine();

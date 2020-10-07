@@ -21,7 +21,7 @@
       "properties": {
         "packageId": "com.example.occludedfacedetection",
         "split": "",
-        "minSdkVersion": "21"
+        "minSdkVersion": "24"
       }
     }
   ]

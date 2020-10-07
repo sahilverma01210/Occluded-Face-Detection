@@ -29,7 +29,6 @@
         android:ems="10"
         android:gravity="center"
         android:inputType="numberSigned"
-        android:text="896"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         android:textStyle="bold" />

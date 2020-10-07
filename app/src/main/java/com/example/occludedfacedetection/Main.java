@@ -27,15 +27,21 @@ public class Main extends AppCompatActivity {
         detect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int fps = Integer.parseInt(String.valueOf(textView.getText()));
-                // Check if requested FPS is within range
-                if(fps<=100 && fps>0) {
-                    Intent intent = new Intent(Main.this, LivePreviewActivity.class);
-                    intent.putExtra("FPS", fps);
-                    startActivity(intent);
+                if(!textView.getText().toString().equals("")){
+                    int fps = Integer.parseInt(String.valueOf(textView.getText()));
+
+                    // Check if requested FPS is within range
+                    if(fps<=100 && fps>0) {
+                        Intent intent = new Intent(Main.this, LivePreviewActivity.class);
+                        intent.putExtra("FPS", fps);
+                        startActivity(intent);
+                    }else {
+                        Toast.makeText(getApplicationContext(),"Please enter value from 1 to 100",Toast.LENGTH_SHORT).show();
+                    }
                 }else {
-                    Toast.makeText(getApplicationContext(),"Please enter value from 1 to 100",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Please enter a value from 1 to 100",Toast.LENGTH_SHORT).show();
                 }
+
             }
         });
     }
